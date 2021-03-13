@@ -7,14 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObjectComponent implements OnInit {
 
-  name: string;
-  secondName?: string;
+  users = Users;
 
   constructor() { 
-    this.name = 'Krystian';
   }
 
   ngOnInit(): void {
   }
 
 }
+
+
+export interface User {
+  id: number;
+  name: string;
+}
+
+
+export const Users: User[] = [
+  {id: 1, name: 'Krystian'},
+  {id: 2, name: 'Tomek'},
+  {id: 3, name: 'Domka'},
+  {id: 4, name: 'Mama'}
+]
+
+

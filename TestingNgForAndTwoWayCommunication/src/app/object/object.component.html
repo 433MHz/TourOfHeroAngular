@@ -1,10 +1,7 @@
-<label for="user_name">Wpisz imie usera: </label>
-<input type="text" name="user_name" placeholder="imie" [(ngModel)]="secondName"><br><br>
+<h2>List of users</h2>
 
-<h4>name: {{name}}<br>
-secondName: {{secondName}}
-</h4><br>
-
-<div *ngIf="name === secondName">
-    <h3>When name and secondName are same as second name i'm visible</h3>
-</div>
+<ul>
+    <li *ngFor = "let user of users">
+        User id is: {{user.id}} And his name is: {{user.name}}
+    </li>
+</ul>
