@@ -13,6 +13,16 @@ export class ObjectComponent implements OnInit {
     name: 'Krystian'
   }
 
+  name? : string;
+
+  fillName(){
+    this.name = 'Not Empty';
+  }
+
+  makeNameNull(){
+    this.name = undefined;
+  }
+
   constructor() { 
   }
 
