@@ -1,8 +1,10 @@
-<h2>User with id: {{user.id}} is named: {{user.name}}</h2><br><br>
 <label for="user_name">Wpisz imie usera: </label>
-<input type="text" name="user_name" placeholder="imie" [(ngModel)]="user.name"><br><br>
-<input type="button" value="Click me to make name not null" (click) = 'fillName()'><input type="button" value="Or me to make name null" (click)="makeNameNull()">
+<input type="text" name="user_name" placeholder="imie" [(ngModel)]="secondName"><br><br>
 
-<div *ngIf="name">
-    <h3>When name is not null i'm visible</h3>
+<h4>name: {{name}}<br>
+secondName: {{secondName}}
+</h4><br>
+
+<div *ngIf="name === secondName">
+    <h3>When name and secondName are same as second name i'm visible</h3>
 </div>

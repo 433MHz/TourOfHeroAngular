@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { user } from './users';
 
 @Component({
   selector: 'app-object',
@@ -8,12 +7,11 @@ import { user } from './users';
 })
 export class ObjectComponent implements OnInit {
 
-  user: user = {
-    id: 1,
-    name: 'Krystian'
-  }
+  name: string;
+  secondName?: string;
 
   constructor() { 
+    this.name = 'Krystian';
   }
 
   ngOnInit(): void {
